@@ -2,7 +2,7 @@ html {
     background-color: #e3d7cb;
     color: #191962;
     font-family: Open Sans, sans-serif;
-    margin: 5%;
+    margin: 2%;
   }
   
   header {
@@ -10,12 +10,17 @@ html {
   }
 
   body {
-    margin: 5%;
+    width: 100%;
+    max-width: 1080px;
+    margin: 50px auto;
   }
 
-  .chart {
-    margin: auto;
-    width: 50%;
+  #chart {
+    width: 100%;
+    max-width: 1080px;
+    height: 390px;
+    overflow: hidden;
+    margin: 50px auto;
   }
 
   rect.bordered {
@@ -37,7 +42,7 @@ html {
     fill: #191962;
   }
 
-  /*###############################################*/
+  /*########################JournalAccordion#######################*/ 
 
   @import url(http://fonts.googleapis.com/css?family=Open+Sans);
   @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
