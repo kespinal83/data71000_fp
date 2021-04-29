@@ -30,7 +30,7 @@ html {
   text.mono {
     font-size: 9pt;
     font-family: Open Sans, sans-serif;
-    fill: #aaa;
+    fill: #191962;
   }
 
   text.axis-workweek {
@@ -49,7 +49,7 @@ html {
   h1 {
     text-align: center;
     font-family: Montserrat,sans-serif;
-    color: #333;
+    color: rgb(138, 0, 0);
   }
   
   .accordion {
