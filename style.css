@@ -15,7 +15,7 @@ html {
     margin: 50px auto;
   }
 
-  #chart {
+  .four {
     width: 100%;
     max-width: 1080px;
     height: 390px;
