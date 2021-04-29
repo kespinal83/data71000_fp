@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <title>Tempora Mutantur</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <head>
+    <script src="https://d3js.org/d3.v3.js"></script>
+  </head>
+    <h1>Mea Tempora Mutantur</h1>
+  <body>
+    <div class='section' id='one'>
+      <div class="accordion">
+        <ul>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 Mo</h2>
+                <p>Journal entry for a Monday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 Tu</h2>
+                <p>Journal entry for a Tuesday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 We</h2>
+                <p>Journal entry for a Wednesday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 Th</h2>
+                <p>Journal entry for a Thursday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 Fr</h2>
+                <p>Journal entry for a Friday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 Sa</h2>
+                <p>Journal entry for a Saturday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2019 Su</h2>
+                <p>Journal entry for a Sunday in 2019</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 Mo</h2>
+                <p>Journal entry for a Monday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 Tu</h2>
+                <p>Journal entry for a Tuesday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 We</h2>
+                <p>Journal entry for a Wednesday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 Th</h2>
+                <p>Journal entry for a Thursday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 Fr</h2>
+                <p>Journal entry for a Friday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 Sa</h2>
+                <p>Journal entry for a Saturday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2020 Su</h2>
+                <p>Journal entry for a Sunday in 2020</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="jrnl/Mon21.jpg" target="popup" onclick="window.open('jrnl/Mon21.jpg','Mon21','width=600,height=400')">
+                <h2>2021 Mo</h2>
+                <p>Journal entry for a Monday in 2021</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2021 Tu</h2>
+                <p>Journal entry for a Tuesday in 2021</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2021 We</h2>
+                <p>Journal entry for a Wednesday in 2021</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2021 Th</h2>
+                <p>Journal entry for a Thursday in 2021</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2021 Fr</h2>
+                <p>Journal entry for a Friday in 2021</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2021 Sa</h2>
+                <p>Journal entry for a Saturday in 2021</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <h2>2021 Su</h2>
+                <p>Journal entry for a Sunday in 2021</p>
+              </a>
+            </div>
+          </li>
+    
+        </ul>
+      
+      </div>
+    </div>
+    <div class='section' id='two'>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras. Nibh tellus molestie nunc non blandit massa enim nec dui. Pretium vulputate sapien nec sagittis aliquam. Pharetra sit amet aliquam id diam.
+    </div>
+    <br>
+    <br>
+    <div class='section' id='three'>
+      <div class='text'>
+        <div id="chart"></div>
+        <div id="dataset-picker"></div>
+        <script type="text/javascript">
+          var margin = { top: 20, right: 0, bottom: 60, left: 50},
+              width = 1080 - margin.left - margin.right,
+              height = 390 - margin.top - margin.bottom,
+              gridSize = Math.floor(width / 24),
+              legendElementWidth = gridSize*3,
+              buckets = 6,
+              colors = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548"],
+              days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+              times = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p", "12a"];
+              datasets = ["2019.tsv", "2020.tsv", "2021.tsv"];
+    
+          var svg = d3.select("#chart").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+          var dayLabels = svg.selectAll(".dayLabel")
+              .data(days)
+              .enter().append("text")
+                .text(function (d) { return d; })
+                .attr("x", 0)
+                .attr("y", function (d, i) { return i * gridSize; })
+                .style("text-anchor", "end")
+                .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+                .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); });
+    
+          var timeLabels = svg.selectAll(".timeLabel")
+              .data(times)
+              .enter().append("text")
+                .text(function(d) { return d; })
+                .attr("x", function(d, i) { return i * gridSize; })
+                .attr("y", 0)
+                .style("text-anchor", "middle")
+                .attr("transform", "translate(" + gridSize / 2 + ", -6)")
+                .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis"); });
+    
+          var heatmapChart = function(tsvFile) {
+            d3.tsv(tsvFile,
+            function(d) {
+              return {
+                day: +d.day,
+                hour: +d.hour,
+                value: +d.value
+              };
+            },
+            function(error, data) {
+              var colorScale = d3.scale.quantile()
+                  .domain([0, buckets - 1, d3.max(data, function (d) { return d.value; })])
+                  .range(colors);
+    
+              var cards = svg.selectAll(".hour")
+                  .data(data, function(d) {return d.day+':'+d.hour;});
+    
+              cards.append("title");
+    
+              cards.enter().append("rect")
+                  .attr("x", function(d) { return (d.hour - 1) * gridSize; })
+                  .attr("y", function(d) { return (d.day - 1) * gridSize; })
+                  .attr("rx", 4)
+                  .attr("ry", 4)
+                  .attr("class", "hour bordered")
+                  .attr("width", gridSize)
+                  .attr("height", gridSize)
+                  .style("fill", colors[0]);
+    
+              cards.transition().duration(1000)
+                  .style("fill", function(d) { return colorScale(d.value); });
+    
+              cards.select("title").text(function(d) { return d.value; });
+              
+              cards.exit().remove();
+    
+              var legend = svg.selectAll(".legend")
+                  .data([0].concat(colorScale.quantiles()), function(d) { return d; });
+    
+              legend.enter().append("g")
+                  .attr("class", "legend");
+    
+              legend.append("rect")
+                .attr("x", function(d, i) { return legendElementWidth * i; })
+                .attr("y", height)
+                .attr("width", legendElementWidth)
+                .attr("height", gridSize / 2)
+                .style("fill", function(d, i) { return colors[i]; });
+    
+              legend.append("text")
+                .attr("class", "mono")
+                .text(function(d) { return "≥ " + Math.round(d); })
+                .attr("x", function(d, i) { return legendElementWidth * i; })
+                .attr("y", height + gridSize);
+    
+              legend.exit().remove();
+    
+            });  
+          };
+    
+          heatmapChart(datasets[0]);
+          
+          var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
+            .data(datasets);
+    
+          datasetpicker.enter()
+            .append("input")
+            .attr("value", function(d){ return "Dataset " + d })
+            .attr("type", "button")
+            .attr("class", "dataset-button")
+            .on("click", function(d) {
+              heatmapChart(d);
+            });
+        </script>
+        </div>
+        <div class='graph' id="d3-container-1"> </div>
+    </div>
+    <br>
+    <div class='section' id='four'>
+      Tempora mutantur is a Latin adage that refers to the changes that the passage of time brings. It also appears in various longer hexametric forms, most commonly Tempora mutantur, nos et mutamur in illis, meaning "Times are changed, we also are changed with them".
+    </div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
