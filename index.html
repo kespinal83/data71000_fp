@@ -275,7 +275,8 @@
                          .duration(200)		
                          .style("opacity", .9);		
                       //div	.html(+ d.value)	
-                      div	.html("<p>I'm a tooltip written in HTML</p><img src='./jrnl/2019_Fr.png'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>")
+                      //div	.html("<p>I'm a tooltip written in HTML</p><img src='jrnl/2019_Fr.png'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>")
+                      div	.html("<img src=>"+ d.img,"</img>")
                          .style("left", (d3.event.pageX) + "px")		
                          .style("top", (d3.event.pageY - 28) + "px");	
             })					
