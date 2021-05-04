@@ -1,9 +1,8 @@
 html {
-    background-image: url(/img/bg.png);
+    background-image: url(/img/bg.jpg);
     max-width: 100%;
     height: auto;
-    color: #c5c5c5;
-    font-family: Open Sans, sans-serif;
+    margin-bottom: -3 px;
 
   }
   
@@ -24,23 +23,44 @@ html {
     margin: 50px auto;
   }
 
+  h2 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #eaeaea;
+    margin-bottom: -3 px;
+    text-align: center;		
+
+  }
+
+  h3 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #eaeaea;
+    margin-bottom: -3 px;
+
+  }
+
+  .five {
+    font-family: 'Rock Salt', cursive;
+    color: #12203b;
+    font-size: 9pt;
+ }
+
   rect.bordered {
-    stroke: #E6E6E6;
-    stroke-width:2px;   
+    stroke: #f8f8f8;
+    stroke-width:1px;   
   }
 
   text.mono {
     font-size: 9pt;
     font-family: Open Sans, sans-serif;
-    fill: #d2e9e3;
+    fill: #b29c87;
   }
 
   text.axis-workweek {
-    fill: #12203b;
+    fill: #eaeaea;
   }
 
   text.axis-worktime {
-    fill: #12203b;
+    fill: #eaeaea;
   }
 
   #dataset-picker {
@@ -69,8 +89,8 @@ html {
   
   h1 {
     text-align: center;
-    font-family: 'Permanent Marker', cursive;;
-    color: #12203b;
+    font-family: 'Ubuntu', sans-serif;
+    color: #b29c87;
   }
   
   .accordion {
