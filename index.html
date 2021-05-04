@@ -4,12 +4,14 @@
   <title>Tempora Mutantur</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <head>
     <script src="https://d3js.org/d3.v3.js"></script> 
 <!--    <script src="https://d3js.org/d3.v4.js"></script>  -->
   </head>
-    <h1>Mea Tempora Mutantur</h1>
+    <h1>Tempora Mutantur</h1>
   <body>
     <div class='section' id='one'>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras. Nibh tellus molestie nunc non blandit massa enim nec dui. Pretium vulputate sapien nec sagittis aliquam. Pharetra sit amet aliquam id diam.
@@ -198,8 +200,11 @@
     <br>
     <div class='section' id='four'>
       <div class='text'>
-        <div id="chart"></div>
         <div id="dataset-picker"></div>
+        <br>
+        <br>
+        <div id="chart"></div>
+
         <script type="text/javascript">
           var margin = { top: 20, right: 0, bottom: 60, left: 50},
               width = 1080 - margin.left - margin.right,
@@ -207,7 +212,8 @@
               gridSize = Math.floor(width / 24),
               legendElementWidth = gridSize*4,
               buckets = 6,
-              colors = ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548"],
+              //colors = ["#c5c5c5","#CE8054","#B35340","#6F3637","#36516a","#4B2B31"],
+              colors = ["#f1f1f1","#eaeaea","#e8dbd2","#4a5978","#172c57","#12203b"],
               days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
               times = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p", "12a"];
               datasets = ["2019.tsv", "2020.tsv", "2021.tsv"];
@@ -217,7 +223,7 @@
               .attr("height", height + margin.top + margin.bottom)
               .append("g")
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+
           var dayLabels = svg.selectAll(".dayLabel")
               .data(days)
               .enter().append("text")
@@ -244,7 +250,8 @@
               return {
                 day: +d.day,
                 hour: +d.hour,
-                value: +d.value
+                value: +d.value,
+                pic: +d.pic
               };
             },
             function(error, data) {
@@ -261,7 +268,8 @@
     
               cards.append("title");
     
-              cards.enter().append("rect")
+              cards.enter()
+                  .append("rect")
                   .attr("x", function(d) { return (d.hour - 1) * gridSize; })
                   .attr("y", function(d) { return (d.day - 1) * gridSize; })
                   .attr("rx", 4)
@@ -273,27 +281,26 @@
                     .on("mouseover", function(d) {		
                       div.transition()		
                          .duration(200)		
-                         .style("opacity", .9);		
-                      //div	.html(+ d.value)	
-                      //div	.html("<p>I'm a tooltip written in HTML</p><img src='jrnl/2019_Fr.png'></img><br>Fancy<br><span style='font-size: 40px;'>Isn't it?</span>")
-                      div	.html("<img src=>"+ d.img,"</img>")
-                         .style("left", (d3.event.pageX) + "px")		
-                         .style("top", (d3.event.pageY - 28) + "px");	
+                         .style("opacity", 1);
+                      div .html("<img src='/jrnl/" + d.pic + ".png'" + "' width='500'>")
+                         .style("left", (d3.event.pageX + 20) + "px")		
+                         .style("top", (d3.event.pageY - 300) + "px");	
             })					
                     .on("mouseout", function(d) {		
                       div.transition()		
                       .duration(500)		
                       .style("opacity", 0);	
             });
-
-                    //CodeEnd
     
-              cards.transition().duration(1000)
-                  .style("fill", function(d) { return colorScale(d.value); });
-    
-  //            cards.select("title").text(function(d) { return d.value; }); //mod
-    
-                cards.exit().remove();
+              cards.transition()
+                .duration(2000)
+                .delay(250)
+                .ease("bounce")
+                .style("fill", function(d) { return colorScale(d.value); 
+              });
+  
+              cards.exit()
+              .remove();
 
               var legend = svg.selectAll(".legend")
                   .data([0].concat(colorScale.quantiles()), function(d) { return d; });
@@ -326,7 +333,7 @@
     
           datasetpicker.enter()
             .append("input")
-            .attr("value", function(d){ return "Dataset " + d })
+            .attr("value", function(d){ return "Year " + d })
             .attr("type", "button")
             .attr("class", "dataset-button")
             .on("click", function(d) {
